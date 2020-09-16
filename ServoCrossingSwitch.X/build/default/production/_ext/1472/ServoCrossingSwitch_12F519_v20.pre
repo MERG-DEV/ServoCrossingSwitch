@@ -1,0 +1,466 @@
+
+# 1 "../ServoCrossingSwitch_12F519_v20.c"
+
+# 26 "C:\Program Files (x86)\Microchip\xc8\v1.41\include\htc.h"
+extern const char __xc8_OPTIM_SPEED;
+
+extern double __fpnormalize(double);
+
+
+# 13 "C:\Program Files (x86)\Microchip\xc8\v1.41\include\xc8debug.h"
+#pragma intrinsic(__builtin_software_breakpoint)
+extern void __builtin_software_breakpoint(void);
+
+# 49 "C:\Program Files (x86)\Microchip\xc8\v1.41\include\pic12f519.h"
+extern volatile unsigned char INDF @ 0x000;
+
+asm("INDF equ 00h");
+
+
+typedef union {
+struct {
+unsigned INDF :8;
+};
+} INDFbits_t;
+extern volatile INDFbits_t INDFbits @ 0x000;
+
+# 68
+extern volatile unsigned char TMR0 @ 0x001;
+
+asm("TMR0 equ 01h");
+
+
+typedef union {
+struct {
+unsigned TMR0 :8;
+};
+} TMR0bits_t;
+extern volatile TMR0bits_t TMR0bits @ 0x001;
+
+# 87
+extern volatile unsigned char PCL @ 0x002;
+
+asm("PCL equ 02h");
+
+
+typedef union {
+struct {
+unsigned PCL :8;
+};
+} PCLbits_t;
+extern volatile PCLbits_t PCLbits @ 0x002;
+
+# 106
+extern volatile unsigned char STATUS @ 0x003;
+
+asm("STATUS equ 03h");
+
+
+typedef union {
+struct {
+unsigned C :1;
+unsigned DC :1;
+unsigned Z :1;
+unsigned nPD :1;
+unsigned nTO :1;
+unsigned PA0 :1;
+unsigned :1;
+unsigned GPWUF :1;
+};
+struct {
+unsigned CARRY :1;
+unsigned :1;
+unsigned ZERO :1;
+};
+} STATUSbits_t;
+extern volatile STATUSbits_t STATUSbits @ 0x003;
+
+# 177
+extern volatile unsigned char FSR @ 0x004;
+
+asm("FSR equ 04h");
+
+
+typedef union {
+struct {
+unsigned FSR :8;
+};
+} FSRbits_t;
+extern volatile FSRbits_t FSRbits @ 0x004;
+
+# 196
+extern volatile unsigned char OSCCAL @ 0x005;
+
+asm("OSCCAL equ 05h");
+
+
+typedef union {
+struct {
+unsigned :1;
+unsigned CAL :7;
+};
+struct {
+unsigned :1;
+unsigned CAL0 :1;
+unsigned CAL1 :1;
+unsigned CAL2 :1;
+unsigned CAL3 :1;
+unsigned CAL4 :1;
+unsigned CAL5 :1;
+unsigned CAL6 :1;
+};
+} OSCCALbits_t;
+extern volatile OSCCALbits_t OSCCALbits @ 0x005;
+
+# 261
+extern volatile unsigned char GPIO @ 0x006;
+
+asm("GPIO equ 06h");
+
+
+extern volatile unsigned char PORTB @ 0x006;
+
+asm("PORTB equ 06h");
+
+
+typedef union {
+struct {
+unsigned GP0 :1;
+unsigned GP1 :1;
+unsigned GP2 :1;
+unsigned GP3 :1;
+unsigned GP4 :1;
+unsigned GP5 :1;
+};
+struct {
+unsigned RB0 :1;
+unsigned RB1 :1;
+unsigned RB2 :1;
+unsigned RB3 :1;
+unsigned RB4 :1;
+unsigned RB5 :1;
+};
+} GPIObits_t;
+extern volatile GPIObits_t GPIObits @ 0x006;
+
+# 352
+typedef union {
+struct {
+unsigned GP0 :1;
+unsigned GP1 :1;
+unsigned GP2 :1;
+unsigned GP3 :1;
+unsigned GP4 :1;
+unsigned GP5 :1;
+};
+struct {
+unsigned RB0 :1;
+unsigned RB1 :1;
+unsigned RB2 :1;
+unsigned RB3 :1;
+unsigned RB4 :1;
+unsigned RB5 :1;
+};
+} PORTBbits_t;
+extern volatile PORTBbits_t PORTBbits @ 0x006;
+
+# 434
+extern volatile unsigned char EECON @ 0x021;
+
+asm("EECON equ 021h");
+
+
+typedef union {
+struct {
+unsigned RD :1;
+unsigned WR :1;
+unsigned WREN :1;
+unsigned WRERR :1;
+unsigned FREE :1;
+};
+} EECONbits_t;
+extern volatile EECONbits_t EECONbits @ 0x021;
+
+# 477
+extern volatile unsigned char EEDATA @ 0x025;
+
+asm("EEDATA equ 025h");
+
+
+typedef union {
+struct {
+unsigned EEDATA :8;
+};
+} EEDATAbits_t;
+extern volatile EEDATAbits_t EEDATAbits @ 0x025;
+
+# 496
+extern volatile unsigned char EEADR @ 0x026;
+
+asm("EEADR equ 026h");
+
+
+typedef union {
+struct {
+unsigned EEADR :8;
+};
+} EEADRbits_t;
+extern volatile EEADRbits_t EEADRbits @ 0x026;
+
+# 515
+extern volatile __control unsigned char OPTION @ 0x000;
+
+
+extern volatile __control unsigned char TRIS @ 0x006;
+
+
+extern volatile __control unsigned char TRISGPIO @ 0x006;
+
+
+extern volatile __control unsigned char TRISB @ 0x006;
+
+# 546
+extern volatile __bit CAL0 @ (((unsigned) &OSCCAL)*8) + 1;
+
+extern volatile __bit CAL1 @ (((unsigned) &OSCCAL)*8) + 2;
+
+extern volatile __bit CAL2 @ (((unsigned) &OSCCAL)*8) + 3;
+
+extern volatile __bit CAL3 @ (((unsigned) &OSCCAL)*8) + 4;
+
+extern volatile __bit CAL4 @ (((unsigned) &OSCCAL)*8) + 5;
+
+extern volatile __bit CAL5 @ (((unsigned) &OSCCAL)*8) + 6;
+
+extern volatile __bit CAL6 @ (((unsigned) &OSCCAL)*8) + 7;
+
+extern volatile __bit CARRY @ (((unsigned) &STATUS)*8) + 0;
+
+extern volatile __bit DC @ (((unsigned) &STATUS)*8) + 1;
+
+extern volatile __bit FREE @ (((unsigned) &EECON)*8) + 4;
+
+extern volatile __bit GP0 @ (((unsigned) &GPIO)*8) + 0;
+
+extern volatile __bit GP1 @ (((unsigned) &GPIO)*8) + 1;
+
+extern volatile __bit GP2 @ (((unsigned) &GPIO)*8) + 2;
+
+extern volatile __bit GP3 @ (((unsigned) &GPIO)*8) + 3;
+
+extern volatile __bit GP4 @ (((unsigned) &GPIO)*8) + 4;
+
+extern volatile __bit GP5 @ (((unsigned) &GPIO)*8) + 5;
+
+extern volatile __bit GPWUF @ (((unsigned) &STATUS)*8) + 7;
+
+extern volatile __bit PA0 @ (((unsigned) &STATUS)*8) + 5;
+
+extern volatile __bit RB0 @ (((unsigned) &GPIO)*8) + 0;
+
+extern volatile __bit RB1 @ (((unsigned) &GPIO)*8) + 1;
+
+extern volatile __bit RB2 @ (((unsigned) &GPIO)*8) + 2;
+
+extern volatile __bit RB3 @ (((unsigned) &GPIO)*8) + 3;
+
+extern volatile __bit RB4 @ (((unsigned) &GPIO)*8) + 4;
+
+extern volatile __bit RB5 @ (((unsigned) &GPIO)*8) + 5;
+
+extern volatile __bit RD @ (((unsigned) &EECON)*8) + 0;
+
+extern volatile __bit WR @ (((unsigned) &EECON)*8) + 1;
+
+extern volatile __bit WREN @ (((unsigned) &EECON)*8) + 2;
+
+extern volatile __bit WRERR @ (((unsigned) &EECON)*8) + 3;
+
+extern volatile __bit ZERO @ (((unsigned) &STATUS)*8) + 2;
+
+extern volatile __bit nPD @ (((unsigned) &STATUS)*8) + 3;
+
+extern volatile __bit nTO @ (((unsigned) &STATUS)*8) + 4;
+
+
+# 27 "C:\Program Files (x86)\Microchip\xc8\v1.41\include\pic.h"
+#pragma intrinsic(__nop)
+extern void __nop(void);
+
+
+# 151
+#pragma intrinsic(_delay)
+extern __nonreentrant void _delay(unsigned long);
+#pragma intrinsic(_delaywdt)
+extern __nonreentrant void _delaywdt(unsigned long);
+
+# 192
+extern unsigned char __resetbits;
+extern __bit __powerdown;
+extern __bit __timeout;
+
+
+# 25 "../ServoCrossingSwitch_12F519_v20.c"
+#pragma config CP = OFF
+#pragma config CPDF = OFF
+#pragma config WDTE = OFF
+#pragma config MCLRE = OFF
+#pragma config FOSC = INTRC
+#pragma config IOSCFS = 4MHz
+
+# 46
+unsigned char PwNow;
+unsigned char PwSaved;
+signed char PwDiff2;
+unsigned char PwMidpos;
+unsigned char PwThreshold[2];
+unsigned char ErrorStateCount= 0;
+unsigned char PortValue;
+bit ErrorState = 0;
+bit SetupState = 0;
+bit RelayState = 0;
+bit NoSigState = 0;
+
+# 64
+unsigned char readNVM(unsigned char Addr)
+{
+EEADR = Addr;
+EECONbits.RD = 1;
+return(EEDATA);
+}
+
+void writeNVM(unsigned char Addr, unsigned char Data)
+{
+EEADR = Addr;
+EECONbits.FREE = 1;
+EECONbits.WREN = 1;
+EECONbits.WR = 1;
+EEADR = Addr;
+EEDATA = Data;
+EECONbits.WREN = 1;
+EECONbits.WR = 1;
+}
+
+unsigned char measurePw(void)
+{
+
+# 97
+TMR0 = 0;
+while( (RB3 == 1) && (TMR0 <= 168) );
+return TMR0;
+}
+
+void setRelay(unsigned char RelayBit)
+{
+RB0 = RelayBit;
+PortValue = PORTB;
+PORTB = (RelayBit)?(PortValue|0b00110000):(PortValue&~0b00110000);
+if(RelayBit != RelayState){
+RelayState = RelayBit;
+writeNVM(8, (unsigned char)RelayBit);
+_delay((unsigned long)((97)*(4000000/4000.0)));
+}
+}
+
+void setLED(unsigned char LedMode)
+{
+
+# 124
+static unsigned char LedCycleCount = 0;
+static unsigned char LedBeat = 0;
+NoSigState = (LedMode == 1) ? 1 : 0;
+if(++LedCycleCount > 4){
+LedCycleCount = 0;
+switch(++LedBeat){
+case 1: RB2 = 1; break;
+case 2: case 3: RB2 = SetupState | ErrorState; break;
+case 4: RB2 = RelayState | SetupState | ErrorState; break;
+case 5: case 6: case 7: case 8: case 9:
+RB2 = SetupState | ErrorState; break;
+case 10: case 11: case 12: case 13:
+RB2 = NoSigState | ErrorState; break;
+case 14: case 15: RB2 = ErrorState; break;
+case 16: RB2 = 0; LedBeat = 0;
+}
+}
+}
+
+void procSetupMode(void)
+{
+static unsigned char Debounce = 0;
+if(ErrorStateCount > 0){ ErrorStateCount--;}else{ErrorState = 0;}
+
+RB0 = 0;
+if(RB1 == 0){
+RB0 = RelayState;
+if(Debounce < 5 ){ Debounce++; }
+else{
+if(SetupState == 0){
+PwSaved = PwNow;
+SetupState = 1;
+}
+}
+}
+else{
+RB0 = RelayState;
+if(SetupState == 1){
+PwDiff2 = (signed char)(PwNow>>1) - (signed char)(PwSaved>>1);
+
+if( ((PwDiff2 < 0) ? (-PwDiff2) : (PwDiff2)) <= 4 ){
+ErrorStateCount = 20;
+ErrorState = 1;
+}
+else{
+PwMidpos = (unsigned char)((signed int)PwSaved
++ (signed int)PwDiff2 );
+writeNVM(0, PwMidpos);
+}
+}
+SetupState = 0;
+Debounce = 0;
+}
+}
+
+void initDevice(void)
+{
+RelayState = readNVM(8);
+PORTB = (RelayState) ? 0b00110000 : 0;
+RB0 = RelayState;
+TRIS = 0b00001010;
+OPTION = 0b10000011;
+
+}
+
+void main(void)
+{
+initDevice();
+PwMidpos = readNVM(0);
+if(( PwMidpos >= 168 ) || ( PwMidpos <= 20 )){
+PwMidpos = 94;
+writeNVM(0, PwMidpos);
+}
+unsigned int LowCount = 0;
+while(1){
+PwThreshold[1] = PwMidpos-2;
+PwThreshold[0] = PwMidpos+2;
+if( RB3 == 1 ){
+PwNow = measurePw();
+if(PwNow > 168){
+setLED(1);
+_delay((unsigned long)((15)*(4000000/4000.0)));
+}
+else{
+setRelay(PwNow > PwThreshold[RelayState] );
+setLED(0);
+procSetupMode();
+}
+LowCount = 0;
+}
+else{
+if( ++LowCount > 2500 ){
+setLED(1);
+LowCount = 0;
+}
+}
+}
+}

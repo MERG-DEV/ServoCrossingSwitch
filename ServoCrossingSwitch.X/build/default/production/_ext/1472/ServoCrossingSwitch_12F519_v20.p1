@@ -1,0 +1,828 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"496 C:\Program Files (x86)\Microchip\xc8\v1.41\include\pic12f519.h
+[v _EEADR `Vuc ~T0 @X0 0 e@38 ]
+"440
+[s S22 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S22 . RD WR WREN WRERR FREE ]
+"439
+[u S21 `S22 1 ]
+[n S21 . . ]
+"448
+[v _EECONbits `VS21 ~T0 @X0 0 e@33 ]
+"477
+[v _EEDATA `Vuc ~T0 @X0 0 e@37 ]
+"68
+[v _TMR0 `Vuc ~T0 @X0 0 e@1 ]
+"588
+[v _RB3 `Vb ~T0 @X0 0 e@51 ]
+"582
+[v _RB0 `Vb ~T0 @X0 0 e@48 ]
+"266
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
+[v F206 `(v ~T0 @X0 1 tf1`ul ]
+"152 C:\Program Files (x86)\Microchip\xc8\v1.41\include\pic.h
+[v __delay `JF206 ~T0 @X0 0 e ]
+[p i __delay ]
+"586 C:\Program Files (x86)\Microchip\xc8\v1.41\include\pic12f519.h
+[v _RB2 `Vb ~T0 @X0 0 e@50 ]
+"584
+[v _RB1 `Vb ~T0 @X0 0 e@49 ]
+"518
+[v _TRIS `VWuc ~T0 @X0 0 e@6 ]
+"515
+[v _OPTION `VWuc ~T0 @X0 0 e@0 ]
+[p mainexit ]
+[; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
+[; ;htc.h: 28: extern double __fpnormalize(double);
+[; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
+[; ;pic12f519.h: 49: extern volatile unsigned char INDF @ 0x000;
+"51 C:\Program Files (x86)\Microchip\xc8\v1.41\include\pic12f519.h
+[; ;pic12f519.h: 51: asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+[; ;pic12f519.h: 54: typedef union {
+[; ;pic12f519.h: 55: struct {
+[; ;pic12f519.h: 56: unsigned INDF :8;
+[; ;pic12f519.h: 57: };
+[; ;pic12f519.h: 58: } INDFbits_t;
+[; ;pic12f519.h: 59: extern volatile INDFbits_t INDFbits @ 0x000;
+[; ;pic12f519.h: 68: extern volatile unsigned char TMR0 @ 0x001;
+"70
+[; ;pic12f519.h: 70: asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+[; ;pic12f519.h: 73: typedef union {
+[; ;pic12f519.h: 74: struct {
+[; ;pic12f519.h: 75: unsigned TMR0 :8;
+[; ;pic12f519.h: 76: };
+[; ;pic12f519.h: 77: } TMR0bits_t;
+[; ;pic12f519.h: 78: extern volatile TMR0bits_t TMR0bits @ 0x001;
+[; ;pic12f519.h: 87: extern volatile unsigned char PCL @ 0x002;
+"89
+[; ;pic12f519.h: 89: asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+[; ;pic12f519.h: 92: typedef union {
+[; ;pic12f519.h: 93: struct {
+[; ;pic12f519.h: 94: unsigned PCL :8;
+[; ;pic12f519.h: 95: };
+[; ;pic12f519.h: 96: } PCLbits_t;
+[; ;pic12f519.h: 97: extern volatile PCLbits_t PCLbits @ 0x002;
+[; ;pic12f519.h: 106: extern volatile unsigned char STATUS @ 0x003;
+"108
+[; ;pic12f519.h: 108: asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+[; ;pic12f519.h: 111: typedef union {
+[; ;pic12f519.h: 112: struct {
+[; ;pic12f519.h: 113: unsigned C :1;
+[; ;pic12f519.h: 114: unsigned DC :1;
+[; ;pic12f519.h: 115: unsigned Z :1;
+[; ;pic12f519.h: 116: unsigned nPD :1;
+[; ;pic12f519.h: 117: unsigned nTO :1;
+[; ;pic12f519.h: 118: unsigned PA0 :1;
+[; ;pic12f519.h: 119: unsigned :1;
+[; ;pic12f519.h: 120: unsigned GPWUF :1;
+[; ;pic12f519.h: 121: };
+[; ;pic12f519.h: 122: struct {
+[; ;pic12f519.h: 123: unsigned CARRY :1;
+[; ;pic12f519.h: 124: unsigned :1;
+[; ;pic12f519.h: 125: unsigned ZERO :1;
+[; ;pic12f519.h: 126: };
+[; ;pic12f519.h: 127: } STATUSbits_t;
+[; ;pic12f519.h: 128: extern volatile STATUSbits_t STATUSbits @ 0x003;
+[; ;pic12f519.h: 177: extern volatile unsigned char FSR @ 0x004;
+"179
+[; ;pic12f519.h: 179: asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+[; ;pic12f519.h: 182: typedef union {
+[; ;pic12f519.h: 183: struct {
+[; ;pic12f519.h: 184: unsigned FSR :8;
+[; ;pic12f519.h: 185: };
+[; ;pic12f519.h: 186: } FSRbits_t;
+[; ;pic12f519.h: 187: extern volatile FSRbits_t FSRbits @ 0x004;
+[; ;pic12f519.h: 196: extern volatile unsigned char OSCCAL @ 0x005;
+"198
+[; ;pic12f519.h: 198: asm("OSCCAL equ 05h");
+[; <" OSCCAL equ 05h ;# ">
+[; ;pic12f519.h: 201: typedef union {
+[; ;pic12f519.h: 202: struct {
+[; ;pic12f519.h: 203: unsigned :1;
+[; ;pic12f519.h: 204: unsigned CAL :7;
+[; ;pic12f519.h: 205: };
+[; ;pic12f519.h: 206: struct {
+[; ;pic12f519.h: 207: unsigned :1;
+[; ;pic12f519.h: 208: unsigned CAL0 :1;
+[; ;pic12f519.h: 209: unsigned CAL1 :1;
+[; ;pic12f519.h: 210: unsigned CAL2 :1;
+[; ;pic12f519.h: 211: unsigned CAL3 :1;
+[; ;pic12f519.h: 212: unsigned CAL4 :1;
+[; ;pic12f519.h: 213: unsigned CAL5 :1;
+[; ;pic12f519.h: 214: unsigned CAL6 :1;
+[; ;pic12f519.h: 215: };
+[; ;pic12f519.h: 216: } OSCCALbits_t;
+[; ;pic12f519.h: 217: extern volatile OSCCALbits_t OSCCALbits @ 0x005;
+[; ;pic12f519.h: 261: extern volatile unsigned char GPIO @ 0x006;
+"263
+[; ;pic12f519.h: 263: asm("GPIO equ 06h");
+[; <" GPIO equ 06h ;# ">
+[; ;pic12f519.h: 266: extern volatile unsigned char PORTB @ 0x006;
+"268
+[; ;pic12f519.h: 268: asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+[; ;pic12f519.h: 271: typedef union {
+[; ;pic12f519.h: 272: struct {
+[; ;pic12f519.h: 273: unsigned GP0 :1;
+[; ;pic12f519.h: 274: unsigned GP1 :1;
+[; ;pic12f519.h: 275: unsigned GP2 :1;
+[; ;pic12f519.h: 276: unsigned GP3 :1;
+[; ;pic12f519.h: 277: unsigned GP4 :1;
+[; ;pic12f519.h: 278: unsigned GP5 :1;
+[; ;pic12f519.h: 279: };
+[; ;pic12f519.h: 280: struct {
+[; ;pic12f519.h: 281: unsigned RB0 :1;
+[; ;pic12f519.h: 282: unsigned RB1 :1;
+[; ;pic12f519.h: 283: unsigned RB2 :1;
+[; ;pic12f519.h: 284: unsigned RB3 :1;
+[; ;pic12f519.h: 285: unsigned RB4 :1;
+[; ;pic12f519.h: 286: unsigned RB5 :1;
+[; ;pic12f519.h: 287: };
+[; ;pic12f519.h: 288: } GPIObits_t;
+[; ;pic12f519.h: 289: extern volatile GPIObits_t GPIObits @ 0x006;
+[; ;pic12f519.h: 352: typedef union {
+[; ;pic12f519.h: 353: struct {
+[; ;pic12f519.h: 354: unsigned GP0 :1;
+[; ;pic12f519.h: 355: unsigned GP1 :1;
+[; ;pic12f519.h: 356: unsigned GP2 :1;
+[; ;pic12f519.h: 357: unsigned GP3 :1;
+[; ;pic12f519.h: 358: unsigned GP4 :1;
+[; ;pic12f519.h: 359: unsigned GP5 :1;
+[; ;pic12f519.h: 360: };
+[; ;pic12f519.h: 361: struct {
+[; ;pic12f519.h: 362: unsigned RB0 :1;
+[; ;pic12f519.h: 363: unsigned RB1 :1;
+[; ;pic12f519.h: 364: unsigned RB2 :1;
+[; ;pic12f519.h: 365: unsigned RB3 :1;
+[; ;pic12f519.h: 366: unsigned RB4 :1;
+[; ;pic12f519.h: 367: unsigned RB5 :1;
+[; ;pic12f519.h: 368: };
+[; ;pic12f519.h: 369: } PORTBbits_t;
+[; ;pic12f519.h: 370: extern volatile PORTBbits_t PORTBbits @ 0x006;
+[; ;pic12f519.h: 434: extern volatile unsigned char EECON @ 0x021;
+"436
+[; ;pic12f519.h: 436: asm("EECON equ 021h");
+[; <" EECON equ 021h ;# ">
+[; ;pic12f519.h: 439: typedef union {
+[; ;pic12f519.h: 440: struct {
+[; ;pic12f519.h: 441: unsigned RD :1;
+[; ;pic12f519.h: 442: unsigned WR :1;
+[; ;pic12f519.h: 443: unsigned WREN :1;
+[; ;pic12f519.h: 444: unsigned WRERR :1;
+[; ;pic12f519.h: 445: unsigned FREE :1;
+[; ;pic12f519.h: 446: };
+[; ;pic12f519.h: 447: } EECONbits_t;
+[; ;pic12f519.h: 448: extern volatile EECONbits_t EECONbits @ 0x021;
+[; ;pic12f519.h: 477: extern volatile unsigned char EEDATA @ 0x025;
+"479
+[; ;pic12f519.h: 479: asm("EEDATA equ 025h");
+[; <" EEDATA equ 025h ;# ">
+[; ;pic12f519.h: 482: typedef union {
+[; ;pic12f519.h: 483: struct {
+[; ;pic12f519.h: 484: unsigned EEDATA :8;
+[; ;pic12f519.h: 485: };
+[; ;pic12f519.h: 486: } EEDATAbits_t;
+[; ;pic12f519.h: 487: extern volatile EEDATAbits_t EEDATAbits @ 0x025;
+[; ;pic12f519.h: 496: extern volatile unsigned char EEADR @ 0x026;
+"498
+[; ;pic12f519.h: 498: asm("EEADR equ 026h");
+[; <" EEADR equ 026h ;# ">
+[; ;pic12f519.h: 501: typedef union {
+[; ;pic12f519.h: 502: struct {
+[; ;pic12f519.h: 503: unsigned EEADR :8;
+[; ;pic12f519.h: 504: };
+[; ;pic12f519.h: 505: } EEADRbits_t;
+[; ;pic12f519.h: 506: extern volatile EEADRbits_t EEADRbits @ 0x026;
+[; ;pic12f519.h: 515: extern volatile __control unsigned char OPTION @ 0x000;
+[; ;pic12f519.h: 518: extern volatile __control unsigned char TRIS @ 0x006;
+[; ;pic12f519.h: 521: extern volatile __control unsigned char TRISGPIO @ 0x006;
+[; ;pic12f519.h: 524: extern volatile __control unsigned char TRISB @ 0x006;
+[; ;pic12f519.h: 546: extern volatile __bit CAL0 @ (((unsigned) &OSCCAL)*8) + 1;
+[; ;pic12f519.h: 548: extern volatile __bit CAL1 @ (((unsigned) &OSCCAL)*8) + 2;
+[; ;pic12f519.h: 550: extern volatile __bit CAL2 @ (((unsigned) &OSCCAL)*8) + 3;
+[; ;pic12f519.h: 552: extern volatile __bit CAL3 @ (((unsigned) &OSCCAL)*8) + 4;
+[; ;pic12f519.h: 554: extern volatile __bit CAL4 @ (((unsigned) &OSCCAL)*8) + 5;
+[; ;pic12f519.h: 556: extern volatile __bit CAL5 @ (((unsigned) &OSCCAL)*8) + 6;
+[; ;pic12f519.h: 558: extern volatile __bit CAL6 @ (((unsigned) &OSCCAL)*8) + 7;
+[; ;pic12f519.h: 560: extern volatile __bit CARRY @ (((unsigned) &STATUS)*8) + 0;
+[; ;pic12f519.h: 562: extern volatile __bit DC @ (((unsigned) &STATUS)*8) + 1;
+[; ;pic12f519.h: 564: extern volatile __bit FREE @ (((unsigned) &EECON)*8) + 4;
+[; ;pic12f519.h: 566: extern volatile __bit GP0 @ (((unsigned) &GPIO)*8) + 0;
+[; ;pic12f519.h: 568: extern volatile __bit GP1 @ (((unsigned) &GPIO)*8) + 1;
+[; ;pic12f519.h: 570: extern volatile __bit GP2 @ (((unsigned) &GPIO)*8) + 2;
+[; ;pic12f519.h: 572: extern volatile __bit GP3 @ (((unsigned) &GPIO)*8) + 3;
+[; ;pic12f519.h: 574: extern volatile __bit GP4 @ (((unsigned) &GPIO)*8) + 4;
+[; ;pic12f519.h: 576: extern volatile __bit GP5 @ (((unsigned) &GPIO)*8) + 5;
+[; ;pic12f519.h: 578: extern volatile __bit GPWUF @ (((unsigned) &STATUS)*8) + 7;
+[; ;pic12f519.h: 580: extern volatile __bit PA0 @ (((unsigned) &STATUS)*8) + 5;
+[; ;pic12f519.h: 582: extern volatile __bit RB0 @ (((unsigned) &GPIO)*8) + 0;
+[; ;pic12f519.h: 584: extern volatile __bit RB1 @ (((unsigned) &GPIO)*8) + 1;
+[; ;pic12f519.h: 586: extern volatile __bit RB2 @ (((unsigned) &GPIO)*8) + 2;
+[; ;pic12f519.h: 588: extern volatile __bit RB3 @ (((unsigned) &GPIO)*8) + 3;
+[; ;pic12f519.h: 590: extern volatile __bit RB4 @ (((unsigned) &GPIO)*8) + 4;
+[; ;pic12f519.h: 592: extern volatile __bit RB5 @ (((unsigned) &GPIO)*8) + 5;
+[; ;pic12f519.h: 594: extern volatile __bit RD @ (((unsigned) &EECON)*8) + 0;
+[; ;pic12f519.h: 596: extern volatile __bit WR @ (((unsigned) &EECON)*8) + 1;
+[; ;pic12f519.h: 598: extern volatile __bit WREN @ (((unsigned) &EECON)*8) + 2;
+[; ;pic12f519.h: 600: extern volatile __bit WRERR @ (((unsigned) &EECON)*8) + 3;
+[; ;pic12f519.h: 602: extern volatile __bit ZERO @ (((unsigned) &STATUS)*8) + 2;
+[; ;pic12f519.h: 604: extern volatile __bit nPD @ (((unsigned) &STATUS)*8) + 3;
+[; ;pic12f519.h: 606: extern volatile __bit nTO @ (((unsigned) &STATUS)*8) + 4;
+[; ;pic.h: 28: extern void __nop(void);
+[; ;pic.h: 152: extern __nonreentrant void _delay(unsigned long);
+[; ;pic.h: 154: extern __nonreentrant void _delaywdt(unsigned long);
+[; ;pic.h: 192: extern unsigned char __resetbits;
+[; ;pic.h: 193: extern __bit __powerdown;
+[; ;pic.h: 194: extern __bit __timeout;
+"25 ../ServoCrossingSwitch_12F519_v20.c
+[p x CP=OFF ]
+"26
+[p x CPDF=OFF ]
+"27
+[p x WDTE=OFF ]
+"28
+[p x MCLRE=OFF ]
+"29
+[p x FOSC=INTRC ]
+"30
+[p x IOSCFS=4MHz ]
+"46
+[v _PwNow `uc ~T0 @X0 1 e ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 46: unsigned char PwNow;
+"47
+[v _PwSaved `uc ~T0 @X0 1 e ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 47: unsigned char PwSaved;
+"48
+[v _PwDiff2 `c ~T0 @X0 1 e ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 48: signed char PwDiff2;
+"49
+[v _PwMidpos `uc ~T0 @X0 1 e ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 49: unsigned char PwMidpos;
+"50
+[v _PwThreshold `uc ~T0 @X0 -> 2 `i e ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 50: unsigned char PwThreshold[2];
+"51
+[v _ErrorStateCount `uc ~T0 @X0 1 e ]
+[i _ErrorStateCount
+-> -> 0 `i `uc
+]
+[; ;ServoCrossingSwitch_12F519_v20.c: 51: unsigned char ErrorStateCount= 0;
+"52
+[v _PortValue `uc ~T0 @X0 1 e ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 52: unsigned char PortValue;
+"53
+[v _ErrorState `b ~T0 @X0 1 e ]
+[i _ErrorState
+-> 0 `i
+]
+[; ;ServoCrossingSwitch_12F519_v20.c: 53: bit ErrorState = 0;
+"54
+[v _SetupState `b ~T0 @X0 1 e ]
+[i _SetupState
+-> 0 `i
+]
+[; ;ServoCrossingSwitch_12F519_v20.c: 54: bit SetupState = 0;
+"55
+[v _RelayState `b ~T0 @X0 1 e ]
+[i _RelayState
+-> 0 `i
+]
+[; ;ServoCrossingSwitch_12F519_v20.c: 55: bit RelayState = 0;
+"56
+[v _NoSigState `b ~T0 @X0 1 e ]
+[i _NoSigState
+-> 0 `i
+]
+[; ;ServoCrossingSwitch_12F519_v20.c: 56: bit NoSigState = 0;
+"64
+[v _readNVM `(uc ~T0 @X0 1 ef1`uc ]
+"65
+{
+[; ;ServoCrossingSwitch_12F519_v20.c: 64: unsigned char readNVM(unsigned char Addr)
+[; ;ServoCrossingSwitch_12F519_v20.c: 65: {
+[e :U _readNVM ]
+"64
+[v _Addr `uc ~T0 @X0 1 r1 ]
+"65
+[f ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 66: EEADR = Addr;
+"66
+[e = _EEADR _Addr ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 67: EECONbits.RD = 1;
+"67
+[e = . . _EECONbits 0 0 -> -> 1 `i `uc ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 68: return(EEDATA);
+"68
+[e ) _EEDATA ]
+[e $UE 27  ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 69: }
+"69
+[e :UE 27 ]
+}
+"71
+[v _writeNVM `(v ~T0 @X0 1 ef2`uc`uc ]
+"72
+{
+[; ;ServoCrossingSwitch_12F519_v20.c: 71: void writeNVM(unsigned char Addr, unsigned char Data)
+[; ;ServoCrossingSwitch_12F519_v20.c: 72: {
+[e :U _writeNVM ]
+"71
+[v _Addr `uc ~T0 @X0 1 r1 ]
+[v _Data `uc ~T0 @X0 1 r2 ]
+"72
+[f ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 73: EEADR = Addr;
+"73
+[e = _EEADR _Addr ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 74: EECONbits.FREE = 1;
+"74
+[e = . . _EECONbits 0 4 -> -> 1 `i `uc ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 75: EECONbits.WREN = 1;
+"75
+[e = . . _EECONbits 0 2 -> -> 1 `i `uc ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 76: EECONbits.WR = 1;
+"76
+[e = . . _EECONbits 0 1 -> -> 1 `i `uc ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 77: EEADR = Addr;
+"77
+[e = _EEADR _Addr ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 78: EEDATA = Data;
+"78
+[e = _EEDATA _Data ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 79: EECONbits.WREN = 1;
+"79
+[e = . . _EECONbits 0 2 -> -> 1 `i `uc ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 80: EECONbits.WR = 1;
+"80
+[e = . . _EECONbits 0 1 -> -> 1 `i `uc ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 81: }
+"81
+[e :UE 28 ]
+}
+"83
+[v _measurePw `(uc ~T0 @X0 1 ef ]
+"84
+{
+[; ;ServoCrossingSwitch_12F519_v20.c: 83: unsigned char measurePw(void)
+[; ;ServoCrossingSwitch_12F519_v20.c: 84: {
+[e :U _measurePw ]
+[f ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 97: TMR0 = 0;
+"97
+[e = _TMR0 -> -> 0 `i `uc ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 98: while( (RB3 == 1) && (TMR0 <= 168) );
+"98
+[e $U 30  ]
+[e :U 31 ]
+[e :U 30 ]
+[e $ && == -> _RB3 `i -> 1 `i <= -> _TMR0 `i -> 168 `i 31  ]
+[e :U 32 ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 99: return TMR0;
+"99
+[e ) _TMR0 ]
+[e $UE 29  ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 100: }
+"100
+[e :UE 29 ]
+}
+"102
+[v _setRelay `(v ~T0 @X0 1 ef1`uc ]
+"103
+{
+[; ;ServoCrossingSwitch_12F519_v20.c: 102: void setRelay(unsigned char RelayBit)
+[; ;ServoCrossingSwitch_12F519_v20.c: 103: {
+[e :U _setRelay ]
+"102
+[v _RelayBit `uc ~T0 @X0 1 r1 ]
+"103
+[f ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 104: RB0 = RelayBit;
+"104
+[e = _RB0 -> _RelayBit `b ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 105: PortValue = PORTB;
+"105
+[e = _PortValue _PORTB ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 106: PORTB = (RelayBit)?(PortValue|0b00110000):(PortValue&~0b00110000);
+"106
+[e = _PORTB -> ? != -> _RelayBit `i -> -> -> 0 `i `uc `i : | -> _PortValue `i -> 48 `i & -> _PortValue `i ~ -> 48 `i `uc ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 107: if(RelayBit != RelayState){
+"107
+[e $ ! != -> _RelayBit `i -> _RelayState `i 34  ]
+{
+[; ;ServoCrossingSwitch_12F519_v20.c: 108: RelayState = RelayBit;
+"108
+[e = _RelayState -> _RelayBit `b ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 109: writeNVM(8, (unsigned char)RelayBit);
+"109
+[e ( _writeNVM (2 , -> -> 8 `i `uc _RelayBit ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 110: _delay((unsigned long)((97)*(4000000/4000.0)));
+"110
+[e ( __delay (1 -> * -> -> 97 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"111
+}
+[e :U 34 ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 111: }
+[; ;ServoCrossingSwitch_12F519_v20.c: 112: }
+"112
+[e :UE 33 ]
+}
+"114
+[v _setLED `(v ~T0 @X0 1 ef1`uc ]
+"115
+{
+[; ;ServoCrossingSwitch_12F519_v20.c: 114: void setLED(unsigned char LedMode)
+[; ;ServoCrossingSwitch_12F519_v20.c: 115: {
+[e :U _setLED ]
+"114
+[v _LedMode `uc ~T0 @X0 1 r1 ]
+"115
+[f ]
+"124
+[v F237 `uc ~T0 @X0 1 s LedCycleCount ]
+[i F237
+-> -> 0 `i `uc
+]
+"125
+[v F238 `uc ~T0 @X0 1 s LedBeat ]
+[i F238
+-> -> 0 `i `uc
+]
+[; ;ServoCrossingSwitch_12F519_v20.c: 124: static unsigned char LedCycleCount = 0;
+[; ;ServoCrossingSwitch_12F519_v20.c: 125: static unsigned char LedBeat = 0;
+[; ;ServoCrossingSwitch_12F519_v20.c: 126: NoSigState = (LedMode == 1) ? 1 : 0;
+"126
+[e = _NoSigState -> ? == -> _LedMode `i -> 1 `i : -> 1 `i -> 0 `i `b ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 127: if(++LedCycleCount > 4){
+"127
+[e $ ! > -> =+ F237 -> -> 1 `i `uc `i -> 4 `i 36  ]
+{
+[; ;ServoCrossingSwitch_12F519_v20.c: 128: LedCycleCount = 0;
+"128
+[e = F237 -> -> 0 `i `uc ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 129: switch(++LedBeat){
+"129
+[e $U 38  ]
+{
+[; ;ServoCrossingSwitch_12F519_v20.c: 130: case 1: RB2 = 1; break;
+"130
+[e :U 39 ]
+[e = _RB2 -> -> 1 `i `b ]
+[e $U 37  ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 131: case 2: case 3: RB2 = SetupState | ErrorState; break;
+"131
+[e :U 40 ]
+[e :U 41 ]
+[e = _RB2 | _SetupState _ErrorState ]
+[e $U 37  ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 132: case 4: RB2 = RelayState | SetupState | ErrorState; break;
+"132
+[e :U 42 ]
+[e = _RB2 | | _RelayState _SetupState _ErrorState ]
+[e $U 37  ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 133: case 5: case 6: case 7: case 8: case 9:
+"133
+[e :U 43 ]
+[e :U 44 ]
+[e :U 45 ]
+[e :U 46 ]
+[e :U 47 ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 134: RB2 = SetupState | ErrorState; break;
+"134
+[e = _RB2 | _SetupState _ErrorState ]
+[e $U 37  ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 135: case 10: case 11: case 12: case 13:
+"135
+[e :U 48 ]
+[e :U 49 ]
+[e :U 50 ]
+[e :U 51 ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 136: RB2 = NoSigState | ErrorState; break;
+"136
+[e = _RB2 | _NoSigState _ErrorState ]
+[e $U 37  ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 137: case 14: case 15: RB2 = ErrorState; break;
+"137
+[e :U 52 ]
+[e :U 53 ]
+[e = _RB2 _ErrorState ]
+[e $U 37  ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 138: case 16: RB2 = 0; LedBeat = 0;
+"138
+[e :U 54 ]
+[e = _RB2 -> -> 0 `i `b ]
+[e = F238 -> -> 0 `i `uc ]
+"139
+}
+[; ;ServoCrossingSwitch_12F519_v20.c: 139: }
+[e $U 37  ]
+"129
+[e :U 38 ]
+[e [\ =+ F238 -> -> 1 `i `uc , $ -> -> 1 `i `uc 39
+ , $ -> -> 2 `i `uc 40
+ , $ -> -> 3 `i `uc 41
+ , $ -> -> 4 `i `uc 42
+ , $ -> -> 5 `i `uc 43
+ , $ -> -> 6 `i `uc 44
+ , $ -> -> 7 `i `uc 45
+ , $ -> -> 8 `i `uc 46
+ , $ -> -> 9 `i `uc 47
+ , $ -> -> 10 `i `uc 48
+ , $ -> -> 11 `i `uc 49
+ , $ -> -> 12 `i `uc 50
+ , $ -> -> 13 `i `uc 51
+ , $ -> -> 14 `i `uc 52
+ , $ -> -> 15 `i `uc 53
+ , $ -> -> 16 `i `uc 54
+ 37 ]
+"139
+[e :U 37 ]
+"140
+}
+[e :U 36 ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 140: }
+[; ;ServoCrossingSwitch_12F519_v20.c: 141: }
+"141
+[e :UE 35 ]
+}
+"143
+[v _procSetupMode `(v ~T0 @X0 1 ef ]
+"144
+{
+[; ;ServoCrossingSwitch_12F519_v20.c: 143: void procSetupMode(void)
+[; ;ServoCrossingSwitch_12F519_v20.c: 144: {
+[e :U _procSetupMode ]
+[f ]
+"145
+[v F241 `uc ~T0 @X0 1 s Debounce ]
+[i F241
+-> -> 0 `i `uc
+]
+[; ;ServoCrossingSwitch_12F519_v20.c: 145: static unsigned char Debounce = 0;
+[; ;ServoCrossingSwitch_12F519_v20.c: 146: if(ErrorStateCount > 0){ ErrorStateCount--;}else{ErrorState = 0;}
+"146
+[e $ ! > -> _ErrorStateCount `i -> 0 `i 56  ]
+{
+[e -- _ErrorStateCount -> -> 1 `i `uc ]
+}
+[e $U 57  ]
+[e :U 56 ]
+{
+[e = _ErrorState -> -> 0 `i `b ]
+}
+[e :U 57 ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 148: RB0 = 0;
+"148
+[e = _RB0 -> -> 0 `i `b ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 149: if(RB1 == 0){
+"149
+[e $ ! == -> _RB1 `i -> 0 `i 58  ]
+{
+[; ;ServoCrossingSwitch_12F519_v20.c: 150: RB0 = RelayState;
+"150
+[e = _RB0 _RelayState ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 151: if(Debounce < 5 ){ Debounce++; }
+"151
+[e $ ! < -> F241 `i -> 5 `i 59  ]
+{
+[e ++ F241 -> -> 1 `i `uc ]
+}
+[e $U 60  ]
+"152
+[e :U 59 ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 152: else{
+{
+[; ;ServoCrossingSwitch_12F519_v20.c: 153: if(SetupState == 0){
+"153
+[e $ ! == -> _SetupState `i -> 0 `i 61  ]
+{
+[; ;ServoCrossingSwitch_12F519_v20.c: 154: PwSaved = PwNow;
+"154
+[e = _PwSaved _PwNow ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 155: SetupState = 1;
+"155
+[e = _SetupState -> -> 1 `i `b ]
+"156
+}
+[e :U 61 ]
+"157
+}
+[e :U 60 ]
+"158
+}
+[; ;ServoCrossingSwitch_12F519_v20.c: 156: }
+[; ;ServoCrossingSwitch_12F519_v20.c: 157: }
+[; ;ServoCrossingSwitch_12F519_v20.c: 158: }
+[e $U 62  ]
+"159
+[e :U 58 ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 159: else{
+{
+[; ;ServoCrossingSwitch_12F519_v20.c: 160: RB0 = RelayState;
+"160
+[e = _RB0 _RelayState ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 161: if(SetupState == 1){
+"161
+[e $ ! == -> _SetupState `i -> 1 `i 63  ]
+{
+[; ;ServoCrossingSwitch_12F519_v20.c: 162: PwDiff2 = (signed char)(PwNow>>1) - (signed char)(PwSaved>>1);
+"162
+[e = _PwDiff2 -> - -> -> >> -> _PwNow `i -> 1 `i `c `i -> -> >> -> _PwSaved `i -> 1 `i `c `i `c ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 164: if( ((PwDiff2 < 0) ? (-PwDiff2) : (PwDiff2)) <= 4 ){
+"164
+[e $ ! <= ? < -> _PwDiff2 `i -> 0 `i : -U -> _PwDiff2 `i -> _PwDiff2 `i -> 4 `i 64  ]
+{
+[; ;ServoCrossingSwitch_12F519_v20.c: 165: ErrorStateCount = 20;
+"165
+[e = _ErrorStateCount -> -> 20 `i `uc ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 166: ErrorState = 1;
+"166
+[e = _ErrorState -> -> 1 `i `b ]
+"167
+}
+[; ;ServoCrossingSwitch_12F519_v20.c: 167: }
+[e $U 65  ]
+"168
+[e :U 64 ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 168: else{
+{
+[; ;ServoCrossingSwitch_12F519_v20.c: 169: PwMidpos = (unsigned char)((signed int)PwSaved
+[; ;ServoCrossingSwitch_12F519_v20.c: 170: + (signed int)PwDiff2 );
+"170
+[e = _PwMidpos -> + -> _PwSaved `i -> _PwDiff2 `i `uc ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 171: writeNVM(0, PwMidpos);
+"171
+[e ( _writeNVM (2 , -> -> 0 `i `uc _PwMidpos ]
+"172
+}
+[e :U 65 ]
+"173
+}
+[e :U 63 ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 172: }
+[; ;ServoCrossingSwitch_12F519_v20.c: 173: }
+[; ;ServoCrossingSwitch_12F519_v20.c: 174: SetupState = 0;
+"174
+[e = _SetupState -> -> 0 `i `b ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 175: Debounce = 0;
+"175
+[e = F241 -> -> 0 `i `uc ]
+"176
+}
+[e :U 62 ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 176: }
+[; ;ServoCrossingSwitch_12F519_v20.c: 177: }
+"177
+[e :UE 55 ]
+}
+"179
+[v _initDevice `(v ~T0 @X0 1 ef ]
+"180
+{
+[; ;ServoCrossingSwitch_12F519_v20.c: 179: void initDevice(void)
+[; ;ServoCrossingSwitch_12F519_v20.c: 180: {
+[e :U _initDevice ]
+[f ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 181: RelayState = readNVM(8);
+"181
+[e = _RelayState -> ( _readNVM (1 -> -> 8 `i `uc `b ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 182: PORTB = (RelayState) ? 0b00110000 : 0;
+"182
+[e = _PORTB -> ? _RelayState : -> 48 `i -> 0 `i `uc ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 183: RB0 = RelayState;
+"183
+[e = _RB0 _RelayState ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 184: TRIS = 0b00001010;
+"184
+[e = _TRIS -> -> 10 `i `uc ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 185: OPTION = 0b10000011;
+"185
+[e = _OPTION -> -> 131 `i `uc ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 187: }
+"187
+[e :UE 66 ]
+}
+"189
+[v _main `(v ~T0 @X0 1 ef ]
+"190
+{
+[; ;ServoCrossingSwitch_12F519_v20.c: 189: void main(void)
+[; ;ServoCrossingSwitch_12F519_v20.c: 190: {
+[e :U _main ]
+[f ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 191: initDevice();
+"191
+[e ( _initDevice ..  ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 192: PwMidpos = readNVM(0);
+"192
+[e = _PwMidpos ( _readNVM (1 -> -> 0 `i `uc ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 193: if(( PwMidpos >= 168 ) || ( PwMidpos <= 20 )){
+"193
+[e $ ! || >= -> _PwMidpos `i -> 168 `i <= -> _PwMidpos `i -> 20 `i 68  ]
+{
+[; ;ServoCrossingSwitch_12F519_v20.c: 194: PwMidpos = 94;
+"194
+[e = _PwMidpos -> -> 94 `i `uc ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 195: writeNVM(0, PwMidpos);
+"195
+[e ( _writeNVM (2 , -> -> 0 `i `uc _PwMidpos ]
+"196
+}
+[e :U 68 ]
+"197
+[v _LowCount `ui ~T0 @X0 1 a ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 196: }
+[; ;ServoCrossingSwitch_12F519_v20.c: 197: unsigned int LowCount = 0;
+[e = _LowCount -> -> 0 `i `ui ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 198: while(1){
+"198
+[e :U 70 ]
+{
+[; ;ServoCrossingSwitch_12F519_v20.c: 199: PwThreshold[1] = PwMidpos-2;
+"199
+[e = *U + &U _PwThreshold * -> -> -> 1 `i `ui `ux -> -> # *U &U _PwThreshold `ui `ux -> - -> _PwMidpos `i -> 2 `i `uc ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 200: PwThreshold[0] = PwMidpos+2;
+"200
+[e = *U + &U _PwThreshold * -> -> -> 0 `i `ui `ux -> -> # *U &U _PwThreshold `ui `ux -> + -> _PwMidpos `i -> 2 `i `uc ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 201: if( RB3 == 1 ){
+"201
+[e $ ! == -> _RB3 `i -> 1 `i 72  ]
+{
+[; ;ServoCrossingSwitch_12F519_v20.c: 202: PwNow = measurePw();
+"202
+[e = _PwNow ( _measurePw ..  ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 203: if(PwNow > 168){
+"203
+[e $ ! > -> _PwNow `i -> 168 `i 73  ]
+{
+[; ;ServoCrossingSwitch_12F519_v20.c: 204: setLED(1);
+"204
+[e ( _setLED (1 -> -> 1 `i `uc ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 205: _delay((unsigned long)((15)*(4000000/4000.0)));
+"205
+[e ( __delay (1 -> * -> -> 15 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"206
+}
+[; ;ServoCrossingSwitch_12F519_v20.c: 206: }
+[e $U 74  ]
+"207
+[e :U 73 ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 207: else{
+{
+[; ;ServoCrossingSwitch_12F519_v20.c: 208: setRelay(PwNow > PwThreshold[RelayState] );
+"208
+[e ( _setRelay (1 -> -> > -> _PwNow `i -> *U + &U _PwThreshold * -> -> _RelayState `x `ux -> -> # *U &U _PwThreshold `ui `ux `i `i `uc ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 209: setLED(0);
+"209
+[e ( _setLED (1 -> -> 0 `i `uc ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 210: procSetupMode();
+"210
+[e ( _procSetupMode ..  ]
+"211
+}
+[e :U 74 ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 211: }
+[; ;ServoCrossingSwitch_12F519_v20.c: 212: LowCount = 0;
+"212
+[e = _LowCount -> -> 0 `i `ui ]
+"213
+}
+[; ;ServoCrossingSwitch_12F519_v20.c: 213: }
+[e $U 75  ]
+"214
+[e :U 72 ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 214: else{
+{
+[; ;ServoCrossingSwitch_12F519_v20.c: 215: if( ++LowCount > 2500 ){
+"215
+[e $ ! > =+ _LowCount -> -> 1 `i `ui -> -> 2500 `i `ui 76  ]
+{
+[; ;ServoCrossingSwitch_12F519_v20.c: 216: setLED(1);
+"216
+[e ( _setLED (1 -> -> 1 `i `uc ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 217: LowCount = 0;
+"217
+[e = _LowCount -> -> 0 `i `ui ]
+"218
+}
+[e :U 76 ]
+"219
+}
+[e :U 75 ]
+"220
+}
+[e :U 69 ]
+"198
+[e $U 70  ]
+[e :U 71 ]
+[; ;ServoCrossingSwitch_12F519_v20.c: 218: }
+[; ;ServoCrossingSwitch_12F519_v20.c: 219: }
+[; ;ServoCrossingSwitch_12F519_v20.c: 220: }
+[; ;ServoCrossingSwitch_12F519_v20.c: 221: }
+"221
+[e :UE 67 ]
+}
