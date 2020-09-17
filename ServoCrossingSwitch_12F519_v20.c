@@ -16,6 +16,8 @@
 // 20-Apr-2016 DH v2.0: changes to suit v2 (Rev B) circuit. 
 //                      a/ 100 mS delay after relay switch
 //                      b/ Power-up, hold relay pin o/c till latch set
+// 16-Sep-2020 IH v2.1: ensure that the short servo pulse is of a minimum width
+//                      to prevent switching on noise spikes. Ian Hogg
 //-------------------------Target---------------------------------------
 //MCU: Microchip PIC12F519; 5 V, 4 MHz internal RC clock
 //PCB: ServoCrossingSwitch Rev A(v1 10/2015) or B(v2 04/2016)
@@ -201,10 +203,14 @@ void main(void)
 		if( iPINSERVO == 1 ){ //servo signal is high
 			PwNow = measurePw();
 			if(PwNow > PwHILIMIT){
+                // servo pulse is too long
 				setLED(LEDNOSIG);
                 __delay_ms(15);
-			}
-			else{ //set relay conditional; PW > selected threshold
+			}else if (PwNow < PwLOLIMIT){
+                // a short spike on the servo signal input
+                // do nothing
+            }else{ 
+                //set relay conditional; PW > selected threshold
                 setRelay(PwNow > PwThreshold[RelayState] );
 				setLED(LEDNORMAL);
 				procSetupMode();
