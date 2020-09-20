@@ -188,6 +188,7 @@ void initDevice(void)
                       //T0CS=0=internal, T0SE=0=Lo2Hi, PSA=0=TMR0, PS=011=1:16
 }
 //--------------------------------------------main----------------------
+#define STABILITY_COUNT 3
 void main(void)
 {
 	initDevice();
@@ -197,6 +198,7 @@ void main(void)
 		writeNVM(NVM_ADDR_MID, PwMidpos);
 	}
 	unsigned int LowCount = 0;
+    unsigned char validPulseCount = 0;
 	while(1){ //loop forever
 		PwThreshold[1] = PwMidpos-PwHYSTDIV2; //RelayState selects which one
 		PwThreshold[0] = PwMidpos+PwHYSTDIV2;
@@ -204,16 +206,21 @@ void main(void)
 			PwNow = measurePw();
 			if(PwNow > PwHILIMIT){
                 // servo pulse is too long
+                validPulseCount=0;
 				setLED(LEDNOSIG);
                 __delay_ms(15);
 			}else if (PwNow < PwLOLIMIT){
                 // a short spike on the servo signal input
+                validPulseCount=0;
                 // do nothing
             }else{ 
-                //set relay conditional; PW > selected threshold
-                setRelay(PwNow > PwThreshold[RelayState] );
-				setLED(LEDNORMAL);
-				procSetupMode();
+                validPulseCount++;
+                if (validPulseCount >= STABILITY_COUNT) {
+                    //set relay conditional; PW > selected threshold
+                    setRelay(PwNow > PwThreshold[RelayState] );
+                    setLED(LEDNORMAL);
+                    procSetupMode();
+                }
 			}
 			LowCount = 0;
 		}
