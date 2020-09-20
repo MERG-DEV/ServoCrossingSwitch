@@ -17,7 +17,9 @@
 //                      a/ 100 mS delay after relay switch
 //                      b/ Power-up, hold relay pin o/c till latch set
 // 16-Sep-2020 IH v2.1: ensure that the short servo pulse is of a minimum width
-//                      to prevent switching on noise spikes. Ian Hogg
+//                      to prevent switching on noise spikes and added a
+//                      counter to ensure the pulse width is stable before
+//                      switching. Ian Hogg
 //-------------------------Target---------------------------------------
 //MCU: Microchip PIC12F519; 5 V, 4 MHz internal RC clock
 //PCB: ServoCrossingSwitch Rev A(v1 10/2015) or B(v2 04/2016)
